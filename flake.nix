@@ -1,5 +1,5 @@
 {
-  description = "crate-name";
+  description = "clippy-mod-file-false-negative";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
@@ -35,17 +35,17 @@
     in
     rec
     {
-      packages.crate-name = naersk-lib.buildPackage {
-        pname = "crate-name";
+      packages.clippy-mod-file-false-negative = naersk-lib.buildPackage {
+        pname = "clippy-mod-file-false-negative";
         root = ./.;
         nativeBuildInputs = with pkgs; [ ];
       };
-      defaultPackage = packages.crate-name;
+      defaultPackage = packages.clippy-mod-file-false-negative;
 
-      apps.crate-name = flake-utils.lib.mkApp {
-        drv = packages.crate-name;
+      apps.clippy-mod-file-false-negative = flake-utils.lib.mkApp {
+        drv = packages.clippy-mod-file-false-negative;
       };
-      defaultApp = apps.crate-name;
+      defaultApp = apps.clippy-mod-file-false-negative;
 
       devShell = pkgs.mkShell {
         nativeBuildInputs = with pkgs; [
