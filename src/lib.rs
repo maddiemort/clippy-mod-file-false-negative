@@ -1,4 +1,4 @@
-//! crate-name
+//! clippy-mod-file-false-negative
 
 #[cfg(test)]
 mod tests {
