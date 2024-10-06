@@ -1,9 +1,3 @@
-//! clippy-mod-file-false-negative
+#![deny(clippy::self_named_module_files)]
 
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
-    }
-}
+pub mod outer;
